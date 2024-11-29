@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 70%;
+}
+
+::selection{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+:root{
+    --main-color: #DA2C32;
+    --black:#34495e;
+    --purple: #A020F0;
+    --white:#fff;
+    --light-color:#999;
+    --light-bg:#f5f5f5;
+    --border:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+body{
+    background-color: var(--light-bg);
+}
+
+section{
+    margin: 0 auto;
+    padding: 2.5rem;
+    max-width: 1200px;
+}
+
+#menu-btn{
+    font-size: 2rem;
+    color: var(--black);
+    display: none;
+}
+
+.btn,
+.inline-btn{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.btn{
+    background-color: var(--main-color);
+}
+
+.btn:hover,
+.inline-btn:hover{
+    background-color: var(--black);
+}
+
+header{
+    position: sticky;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+}
+
+header .nav-1 .flex{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header .nav-1{
+    background-color: var(--black);
+}
+
+header .nav-2 .flex{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header .nav-2{
+    background-color: var(--white);
+}
+
+header .nav .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+header .nav .flex .logo{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+header .nav .flex .logo i{
+    margin-right: .8rem;
+    color: var(--main-color);
+}
+
+header .nav .flex ul{
+    list-style: none;
+}
+
+header .nav .flex ul li{
+    float: left;
+    position: relative;
+}
+
+header .nav .flex ul li a{
+    color: var(--black);
+    background-color: var(--white);
+    padding: 1rem .8rem;
+    font-size: 1.6rem;
+    /* text-transform: capitalize; */
+    display: block;
+}
+
+header .nav .flex ul li a i{
+    margin-left: .8rem;
+}
+
+header .nav .flex ul li a:hover{
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+header .nav .flex ul li ul{
+    position: absolute;
+    left: 0;
+    width:12rem;
+}
+
+header .nav .flex ul li ul li{
+    width: 100%;
+}
+
+header .nav .flex ul li ul{
+    display: none;
+}
+
+header .nav .flex ul li:hover ul{
+    display: block;
+}
+
+.form-container form{
+    max-width: 45rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.form-container form .box{
+    width: 100%;
+    background-color: var(--light-bg);
+    color: var(--black);
+    padding: 1.2rem;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+}
+
+.form-container form h3{
+    color: var(--black);
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-container form h3 i{
+    color: var(--black);
+}
+
+.form-container form p{
+    color: var(--black);
+    font-size: 1.8rem;
+    margin-top: 1.6rem;
+}
+
+.form-container form p a{
+    color: var(--main-color);
+}
+
+.form-container form p a:hover{
+    text-decoration: underline;
+}
+
+/* post property section starts */
+.property-form form{
+    background-color: var(--white);
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+
+}
+
+.property-form form h3{
+    color: var(--main-color);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.property-form form .flex,
+.property-form form .checkbox{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+.property-form form .flex .box{
+    flex: 1 1 30rem;
+}
+
+.property-form form .input{
+    width: 100%;
+    border: var(--border);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    background-color: var(--light-bg);
+    padding: .9rem .6rem;
+    border-radius: .5rem;
+}
+
+.property-form form textarea{
+    height: 17rem;
+    resize: none;
+}
+
+.property-form form p{
+    color: var(--black);
+    font-size: 1.6rem;
+}
+
+.property-form form p span{
+    color: var(--main-color);
+}
+
+.property-form form .checkbox{
+    padding-bottom: 1rem;
+}
+
+.property-form form .checkbox input[type="checkbox"]{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+/* post property section ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries starts */
+
+@media(max-width:991px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width:768px){
+   #menu-btn{
+    display: inline-block;
+   }
+
+   header .nav .menu{
+     position: absolute;
+     left: 0;right: 0;top: 99%;
+     background-color: var(--white);
+     border-top: var(--border);
+     z-index: 10;
+     transition: .2s linear;
+     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   header .nav .menu:active{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
